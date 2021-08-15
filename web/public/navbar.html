@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">IoT Devices</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#expanded-nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="expanded-nav">
+      <div class="navbar-nav" id="navbars">
+        <a class="nav-item nav-link" href="/device-register">Add new device</a>
+        <a class="nav-item nav-link" href="/devices">Your Devices</a>
+        <script>
+          if(user_email[0] == 'jainkinshuk112@gmail.com')
+          {
+            $('#navbars').append(`
+            
+            <a class="nav-item nav-link" href="/user">Users</a>
+            <a class="nav-item nav-link" href="/">Log Out</a>
+            `);
+          }
+          else
+          {
+            $('#navbars').append(`
+            
+            <a class="nav-item nav-link" href="/">Log Out</a>
+            `);
+          }
+        </script>
+        
+        
+      </div>
+      
+    </div>
+  </nav>
