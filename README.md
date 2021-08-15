@@ -1,4 +1,4 @@
-# smart-building
+# Smart Building
 Folder needs to be setup as npm
 ```bash
 cd web
