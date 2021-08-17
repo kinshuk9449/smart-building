@@ -12,3 +12,9 @@ Keep pressing enter and you can change any thing you want to.
 ```bash
 npm install express --save
 ```
+
+## Run Server
+
+```
+npm start
+```
