@@ -24,8 +24,20 @@ app.get('/landing-page', (req, res) => {
     res.sendFile(`${base}/landing-page.html`);
 });
 
-app.get('/devices', (req, res) => {
-    res.sendFile(`${base}/devices.html`);
+app.get('/light', (req, res) => {
+    res.sendFile(`${base}/light.html`);
+});
+
+app.get('/conditioner', (req, res) => {
+    res.sendFile(`${base}/conditioner.html`);
+});
+
+app.get('/security', (req, res) => {
+    res.sendFile(`${base}/security.html`);
+});
+
+app.get('/other-devices', (req, res) => {
+    res.sendFile(`${base}/other-devices.html`);
 });
 
 app.get('/device-register', (req, res) => {

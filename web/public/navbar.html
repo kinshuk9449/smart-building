@@ -5,13 +5,17 @@
     </button>
     <div class="collapse navbar-collapse" id="expanded-nav">
       <div class="navbar-nav" id="navbars">
-        <a class="nav-item nav-link" href="/device-register">Add new device</a>
-        <a class="nav-item nav-link" href="/devices">Your Devices</a>
+        
+        <a class="nav-item nav-link" href="/landing-page">Dashboard</a>
+        <a class="nav-item nav-link" href="/light">Available Lights</a>
+        <a class="nav-item nav-link" href="/conditioner">Available Conditioners</a>
+        <a class="nav-item nav-link" href="/security">Available Security Devices</a>
+        <a class="nav-item nav-link" href="/other-devices">Other Available Devices</a>
         <script>
           if(user_email[0] == 'jainkinshuk112@gmail.com')
           {
             $('#navbars').append(`
-            
+            <a class="nav-item nav-link" href="/device-register">Add new device</a>
             <a class="nav-item nav-link" href="/user">Users</a>
             <a class="nav-item nav-link" href="/">Log Out</a>
             `);

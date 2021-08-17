@@ -55,11 +55,12 @@ function Sign_In() {
 }
 
 function Device_register() {
-    email = user_email[0];
-    const name = user_name[0];
+    
     const deviceid = $('#device-id').val();
+    const devicebuilding = $('#device-building').val();
+    const deviceroom = $('#device-room').val();
     const device = $('#device').val();
-    devices.push({ email, deviceid,device,name });
+    devices.push({ deviceid,device,devicebuilding,deviceroom});
     localStorage.setItem('devices', JSON.stringify(devices));
-    location.href = '/devices';
+    location.href = '/landing-page';
 }

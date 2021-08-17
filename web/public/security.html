@@ -34,21 +34,21 @@
             <table id="devices" class="table">
                 <thead>
                     <tr>
-                        <th style="color: rgb(230, 27, 203);">Name</th>
                         <th style="color: rgb(230, 27, 203);">Device Id</th>
-                        <th style="color: rgb(230, 27, 203);">Devices</th>
+                        <th style="color: rgb(230, 27, 203);">Device Building</th>
+                        <th style="color: rgb(230, 27, 203);">Devices Location</th>
                     </tr>
                 </thead>
                 <tbody style="color: rgb(169, 230, 27);">
                     <script>
                         devices.forEach(function (device) {
-                         if(device.email == user_email[0])
+                         if(device.device.toLowerCase() == 'security')
                          {
                             $('#devices tbody').append(`
       <tr>
-        <td>${device.name}</td>
         <td>${device.deviceid}</td>
-        <td>${device.device}</td>
+        <td>${device.devicebuilding}</td>
+        <td>${device.deviceroom}</td>
       </tr>`
                             );
     }
