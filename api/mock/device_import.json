@@ -1,0 +1,16 @@
+ [
+      {
+        "id": 0,
+        "deviceid": "2193",
+        "device": "Light",
+        "devicebuilding": "LC",
+        "deviceroom": "102"
+      },
+      {
+        "deviceid": "2178",
+        "devicebuilding": "M",
+        "deviceroom": "345",
+        "device": "conditioner",
+        "id": 1
+      }
+    ]
