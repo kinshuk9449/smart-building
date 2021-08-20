@@ -8,11 +8,11 @@
         
         <a class="nav-item nav-link" href="/landing-page">Dashboard</a>
         <a class="nav-item nav-link" href="/light">Available Lights</a>
-        <a class="nav-item nav-link" href="/conditioner">Available Conditioners</a>
+        <a class="nav-item nav-link" href="/conditioner">Available Air Conditioners</a>
         <a class="nav-item nav-link" href="/security">Available Security Devices</a>
         <a class="nav-item nav-link" href="/other-devices">Other Available Devices</a>
         <script>
-          if(user_email[0] == 'jainkinshuk112@gmail.com')
+          if(user_email[0].toLowerCase() == 'admin')
           {
             $('#navbars').append(`
             <a class="nav-item nav-link" href="/device-register">Add new device</a>
