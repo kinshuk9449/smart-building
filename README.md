@@ -62,3 +62,19 @@ Run the api
 ```bash
 npm start
 ``
+## Running Tests
+
+You need to switch to different folder and then run pacakges
+
+```bash
+cd tests 
+npm init
+npm install jest --save-dev
+npm install axios --save-dev
+```
+
+Ruuning the tests
+
+```bash
+npm run test
+```
