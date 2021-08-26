@@ -1,3 +1,8 @@
+/**
+ * This provides the automatic testing and checks if our
+ * apis are working properly or not.
+ * It sends a data and match the result with expected result.
+ */
 const axios = require('axios');
 DEVICE_URL="http://localhost:5000/api"
 USER_URL="http://localhost:5001/api"
