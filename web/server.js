@@ -1,5 +1,22 @@
+/**
+ * It allows the redirection easy and helps to deploy the app on internet
+ * It makes the link available and returns the html file in return.
+ */
 const express = require('express');
-const app = express();
+const helmet = require("helmet");
+
+const fs = require('fs')
+const https = require('https')
+var sslOptions = {
+key: fs.readFileSync('key.pem'),
+cert: fs.readFileSync('cert.pem'),
+passphrase: 'kjhotel'
+};
+
+var app = express();
+
+app.use(helmet());
+
 const port = 3000;
 const base = `${__dirname}/public`;
 app.use(express.static('public'));
@@ -40,6 +57,10 @@ app.get('/other-devices', (req, res) => {
     res.sendFile(`${base}/other-devices.html`);
 });
 
+app.get('/send-command', (req, res) => {
+    res.sendFile(`${base}/send-command.html`);
+    });
+    
 app.get('/device-register', (req, res) => {
     res.sendFile(`${base}/device-register.html`);
 });
@@ -48,6 +69,6 @@ app.get('*', (req, res) => {
     res.sendFile(`${base}/404.html`);
 });
 
-app.listen(port, () => {
-    console.log(`listening on port ${port}`);
-});
+var server = https.createServer(sslOptions, app).listen(port, function(){
+    console.log("Express server listening on port " + port);
+    });

@@ -12,7 +12,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon api.js"
+    "start": "nodemon api.js",
+    "doc": "apidoc -o public/generated-docs/ -e node_modules/"
   },
   "author": "Kinshuk Jain",
   "license": "ISC"

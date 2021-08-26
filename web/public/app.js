@@ -9,6 +9,10 @@ $(document).ready(function () {
 const USER_URL = `http://localhost:5001/api`;
 const DEVICE_URL = `http://localhost:5000/api`;
 
+/**
+ *  Devices information is taken from mongodb.
+ * It sees the type of device and display it in specific tables according to the table name.
+ */
 $.get(`${DEVICE_URL}/devices`)
     .then(response => {
         response.forEach(device => {
@@ -63,7 +67,11 @@ const user_name = JSON.parse(localStorage.getItem('user_name')) || [];
 const user_email = JSON.parse(localStorage.getItem('user_email')) || [];
 
 
-
+/**
+ * Users details are taken and then it checks if the email is already registered or not.
+ * If it is registered before it asks user to sign in instead.
+ * If not registered it will register the user and redirect to signin page.
+ */
 
 
 function Sign_Up() {
@@ -117,6 +125,11 @@ function Sign_Up() {
 
 }
 
+/**
+ * Details are matched with the existing user and matches if user and password matches or not
+ * If it matches user is given access and the page specific to its access is shown.
+ * If it doesn't match it redirects user to sign up page.
+ */
 
 function Sign_In() {
     var login = 0;
@@ -149,6 +162,11 @@ function Sign_In() {
 
 }
 
+/**
+ * If the user is given access it can add the device
+ * If the device id is already registered it asks to register with different device id
+ * If the device id is different from previous registered devices it registers the device
+ */
 function Device_register() {
 
     var device_exist =0;

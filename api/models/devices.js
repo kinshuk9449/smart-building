@@ -6,5 +6,5 @@ module.exports = mongoose.model('Device', new mongoose.Schema({
   device: String,
   devicebuilding: String,
   deviceroom: String,
-
+  sensorData: Array
 }, { collection : 'topic4' }));
