@@ -78,9 +78,29 @@ Ruuning the tests
 ```bash
 npm run test
 ```
+
+## MQTT
+
+You need to install some of the packages
+
+```bash
+cd mqttt
+npm install mongoose --save
+npm install mqtt
+npm install body-parser
+npm install axios
+npm install serialport
+```
+
+Start the file
+
+```bash
+npm start
+```
+
 ## Creating Docs
 
-```
+```bash
 cd api
 npm run doc
 req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 100
@@ -88,7 +108,7 @@ req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 100
 
 Add a paraphase and change the paraphase in api.js to the given one
 
-```
+```bash
 cd ../apis
 npm run doc
 req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 100
