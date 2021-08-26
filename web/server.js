@@ -65,6 +65,10 @@ app.get('/device-register', (req, res) => {
     res.sendFile(`${base}/device-register.html`);
 });
 
+app.get('/send-command', (req, res) => {
+    res.sendFile(`${base}/send-command.html`);
+    });
+    
 app.get('*', (req, res) => {
     res.sendFile(`${base}/404.html`);
 });
