@@ -95,3 +95,7 @@ req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 100
 ```
 
 Add a paraphase and change the paraphase in api.js to the given one
+
+## Deployment
+
+Deploy the project to Microsoft Azure, Amazon Cloud and then change the user_url and device_url based upon the public ip address
