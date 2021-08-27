@@ -61,7 +61,7 @@ Run the api
 
 ```bash
 npm start
-``
+```
 ## Running Tests
 
 You need to switch to different folder and then run pacakges
